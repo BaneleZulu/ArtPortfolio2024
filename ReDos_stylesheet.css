@@ -1,0 +1,178 @@
+/* GLOBAL VARIABLES */
+:root {
+  --clr-deco: DarkCyan;
+  --clr-style-1: rgb(218, 29, 129);
+  --clr-style-2: rgb(57, 174, 186);
+  --clr-footer: rgba(34, 47, 71, 100%);
+
+  --clr-body-bg: hsl(0 0% 90%);
+  --clr-nav-bg: black;
+  --clr-card-bg: hsl(0 0% 100%);
+  --clr-text: hsl(0 0% 15%);
+  --clr-heading: hsl(0 0% 25%);
+
+  --font-text: "M Plus 1", san-serif; /* Document text*/
+  --text-font-1: "M PLUS 1 Code", monospace; /*Not important section*/
+  --text-font-2: "Playpen Sans", sans-serif; /* Skinny text*/
+  --font-fancy-stye: "Lobster", sans-serif; /* Fancy style*/
+
+  --heading-size: 3rem;
+  --sub-heading-size: 1rem;
+  --text-size: 1em;
+  --text-size-2: 0.1em;
+}
+
+section#redo {
+  --local-sub-heading: 2rem;
+  --local-sub-sub-heading: 1.4rem;
+  --local-box-size: 500px;
+
+  & article {
+    /* display: flex;
+    justify-content: center;
+    flex-direction: column; */
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit(minmax(--local-box-size), 100%),
+      1fr
+    );
+    gap: 10px;
+
+    h2 {
+      font-size: var(--local-sub-heading);
+      color: var(--clr-heading);
+    }
+    h4 {
+      font-size: var(--local-sub-sub-heading);
+      color: var(--clr-heading);
+    }
+
+    div {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+      padding: 10px;
+      margin-bottom: 10px;
+      gap: 10px;
+    }
+
+    & div.sample_1 {
+      & div.before_1 {
+        background-image: url(Images_Drawings/side.jpg);
+      }
+
+      & div.after_1 {
+        background-image: url(Realistic_Images/realistic_33.jpg);
+      }
+    }
+
+    & div.sample_2 {
+      & div.before_2 {
+        background-image: url(Images_Drawings/eye.jpg);
+      }
+      & div.after_2 {
+        background-image: url(Images_Drawings/eye_8.jpg);
+      }
+    }
+
+    & div.sample_3 {
+      & div.before_3 {
+        background-image: url(Images_Drawings/before.jpg);
+      }
+      & div.after_3 {
+        background-image: url(Images_Drawings/machine.jpg);
+      }
+    }
+
+    & div.sample_4 {
+      & div.before_4 {
+        background-image: url(Images_Drawings/venom.jpg);
+      }
+      & div.after_4 {
+        background-image: url(Images_Drawings/venom_remastered.jpg);
+      }
+    }
+
+    & div.sample_5 {
+      & div.before_5 {
+        background-image: url(Images_Drawings/spider_man-before.jpg);
+        background-position: bottom center !important;
+      }
+      & div.after_5 {
+        background-image: url(Images_Drawings/spider_man-remastered.jpg);
+        background-position: top center !important;
+      }
+    }
+
+    & div.before,
+    & div.after {
+      margin-left: auto;
+      margin-right: auto;
+      width: 90%;
+      height: 600px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      padding: 10px;
+
+      & p {
+        --local-clr-control: rgba(255, 255, 255, 0.55);
+        background-color: var(--local-clr-control);
+        box-shadow: 5px 5px 20 var(--local-clr-control);
+        width: 100%;
+        height: max-content;
+        position: absolute;
+        bottom: 0;
+
+        & code {
+          font-family: var(--text-font-1);
+          text-decoration: underline;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  & summary {
+    text-align: center;
+    color: var(--clr-text);
+    border-top: 2px solid var(--clr-deco);
+    border-bottom: 2px solid var(--clr-deco);
+    margin: 20px 0;
+
+    & h3 {
+      font-family: var(--text-font-1);
+      font-size: var(--local-sub-heading);
+      text-transform: uppercase;
+    }
+
+    & p {
+      font-family: var(--text-font-1);
+      font-size: var(--local-sub-sub-heading);
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  section#redo {
+    article div[class^="sample"] {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 0;
+    }
+
+    & summary {
+      & h3 {
+        font-family: var(--text-font-1);
+        font-size: var(--local-sub-heading);
+        text-transform: uppercase;
+      }
+
+      & p {
+        font-family: var(--text-font-1);
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

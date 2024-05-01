@@ -1,0 +1,214 @@
+/* GLOBAL VARIABLES */
+:root {
+  --clr-deco: DarkCyan;
+  --clr-style-1: rgb(218, 29, 129);
+  --clr-style-2: rgb(57, 174, 186);
+  --clr-footer: rgba(34, 47, 71, 100%);
+
+  --clr-body-bg: hsl(0 0% 90%);
+  --clr-nav-bg: black;
+  --clr-card-bg: hsl(0 0% 100%);
+  --clr-text: hsl(0 0% 15%);
+  --clr-heading: hsl(0 0% 25%);
+
+  --font-text: "M Plus 1", san-serif; /* Document text*/
+  --text-font-1: "M PLUS 1 Code", monospace; /* Skinny text*/
+  --text-font-2: "Playpen Sans", sans-serif; /*Not important section*/
+  --font-fancy-stye: "Lobster", sans-serif; /* Fancy style*/
+
+  --heading-size: 3rem;
+  --sub-heading-size: 2rem;
+  --text-size: 1em;
+  --text-size-2: 0.1em;
+}
+
+/*** EDUCATION SECTION  */
+section#advice {
+  & figure {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    margin-bottom: 5rem;
+
+    & figcaption {
+      font-size: 1.2rem;
+      color: var(--clr-text);
+      font-family: var(--text-font-1);
+      border-bottom: 3px solid var(--clr-deco);
+      text-indent: 20px;
+    }
+  }
+
+  /** MAIN CONTENT OF THE ADVICE SECTION  */
+  article {
+    --local-sub-heading: 2rem;
+    --local-sub-sub-heading: 1.4rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    & h4 {
+      font-family: var(--font-fancy-stye);
+      font-size: var(--heading-size);
+      color: var(--clr-heading);
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    & p {
+      font-size: var(--text-size);
+      color: var(--clr-text);
+      font-family: var(--text-font-1);
+      text-align: center;
+    }
+
+    & fieldset {
+      border-radius: 12px;
+      border-color: var(--clr-heading);
+      padding: 20px;
+      margin-bottom: 20px;
+
+      & legend {
+        font-size: var(--local-sub-heading);
+        font-family: var(--text-font-1);
+        color: var(--clr-heading);
+      }
+
+      & dt {
+        font-family: var(--text-font-1);
+        font-size: var(--local-sub-sub-heading);
+        color: var(--clr-text);
+        font-weight: 900;
+
+        & span {
+          font-family: var(--text-font-2);
+          color: var(--clr-deco);
+        }
+      }
+
+      & dd {
+        font-family: var(--text-font-1);
+        font-size: var(--text-size);
+        color: var(--clr-text);
+
+        & strong {
+          text-decoration: underline;
+          color: var(--clr-text);
+          font-family: var(--text-font-1);
+        }
+      }
+
+      & p {
+        font-family: var(--text-font-1);
+        font-size: var(--text-size);
+        color: var(--clr-text);
+        word-wrap: break-word;
+        text-align: left !important;
+        width: 80%;
+      }
+
+      /*** Internet resources in the METHOD_2 FIELDSET */
+      & ul {
+        border-top: 2px solid var(--clr-deco);
+        padding: 1rem;
+        & li {
+          font-family: var(--text-font-1);
+          font-size: 1.2rem;
+          color: var(--clr-text);
+
+          & a {
+            text-decoration: none;
+            color: var(--clr-style-1);
+            margin-left: 10px;
+          }
+        }
+      }
+
+      & div.online_courses {
+        --local-box-size: 250px;
+
+        display: grid;
+        grid-template-columns: repeat(
+          auto-fit,
+          minmax(var(--local-box-size), 1fr)
+        );
+        gap: 10px;
+        height: min-content;
+
+        & span {
+          background-color: lightgray;
+          padding: 2px;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          margin: 0 !important;
+
+          & h1 {
+            text-wrap: wrap;
+            color: var(--clr-body-bg);
+          }
+
+          & a {
+            font-size: var(--local-sub-heading);
+            color: var(--clr-deco);
+          }
+        }
+      }
+    }
+  }
+
+  ul li::first-letter {
+    color: var(--clr-style-1);
+    border-bottom: 2px solid var(--clr-heading);
+  }
+  dt::first-letter {
+    text-transform: uppercase;
+    color: var(--clr-deco);
+    border-bottom: 2px solid var(--clr-heading);
+  }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1200px) {
+  figure {
+    width: 100% !important;
+    video {
+      width: 100%;
+      height: 100dvh !important;
+      object-fit: cover !important;
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  figure {
+    width: 100% !important;
+    video {
+      width: 100%;
+      height: 100dvh !important;
+      object-fit: contain !important;
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  article {
+    margin: 0;
+    padding: 0 !important;
+    & fieldset {
+      border: none;
+      margin: 0;
+      border-bottom: 4px solid var(--clr-deco);
+      border-radius: 12px;
+      & legend {
+        border-bottom: 2px solid var(--clr-deco);
+        font-size: 1.4rem !important;
+      }
+      & p {
+        width: 100% !important;
+        text-align: center !important;
+      }
+    }
+  }
+}

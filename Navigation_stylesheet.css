@@ -1,0 +1,211 @@
+/* GLOBAL VARIABLES */
+:root {
+  --clr-deco: DarkCyan;
+  --clr-style-1: rgb(218, 29, 129);
+  --clr-style-2: rgb(57, 174, 186);
+  --clr-footer: rgba(34, 47, 71, 100%);
+
+  --clr-body-bg: hsl(0 0% 90%);
+  --clr-nav-bg: black;
+  --clr-card-bg: hsl(0 0% 100%);
+  --clr-text: hsl(0 0% 15%);
+  --clr-heading: hsl(0 0% 25%);
+
+  --font-text: "M Plus 1", san-serif; /* Document text*/
+  --text-font-1: "M PLUS 1 Code", monospace; /*Not important section*/
+  --text-font-2: "Playpen Sans", sans-serif; /* Skinny text*/
+  --font-fancy-stye: "Lobster", sans-serif; /* Fancy style*/
+
+  --heading-size: 3rem;
+  --sub-heading-size: 1rem;
+  --text-size: 1em;
+  --text-size-2: 0.1em;
+}
+
+/***DESKTOP NAV  */
+header {
+  background-color: transparent !important;
+  font-family: var(--text-font-1);
+  color: #fff;
+  font-size: 1.3rem;
+  position: relative;
+  top: 0;
+
+  & nav.top_lvl_header {
+    background-color: rgba(61, 61, 61, 100%);
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    & img {
+      border-radius: 50%;
+      border: 2px solid var(--clr-heading);
+      margin: 10px 10px;
+      display: inline;
+    }
+
+    & ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: right;
+      gap: 20;
+
+      & li {
+        margin-left: 30px;
+        padding: 0 10px;
+
+        & a {
+          color: #fff;
+          text-decoration: none;
+          font-family: var(--text-font-1);
+          transition: border 0.4s ease-in-out;
+        }
+      }
+    }
+  }
+
+  & nav.low_lvl_header {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    height: 60px;
+    position: inherit;
+    top: 70px;
+    left: 0;
+
+    & h3 {
+      font-family: var(--font-fancy-stye);
+      color: var(--clr-deco);
+      font-variant: small-caps;
+      border-bottom: 3px solid var(--clr-heading);
+      letter-spacing: 0.3rem;
+      padding: 0 7px;
+      height: min-content;
+    }
+
+    & ul {
+      display: flex;
+      justify-content: center;
+      height: min-content;
+      gap: 30px;
+      list-style-type: none;
+      & li {
+        margin-left: 20px;
+        padding: 0 10px;
+        & a {
+          color: var(--clr-heading);
+          text-decoration: none;
+          font-family: var(--text-font-1);
+          transition: border 0.4s ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+/*** MOBILE NAVIGATION  */
+body main header.mobile_navigation {
+  display: none;
+  height: 20dvh;
+
+  & nav.top_lvl_header {
+    display: none;
+
+    & ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+
+      & li {
+        font-size: 1.4rem;
+      }
+    }
+
+    & h3 {
+      font-size: 1.4rem;
+      color: var(--clr-deco);
+      font-family: var(--font-fancy-stye);
+      margin: 0;
+    }
+  }
+}
+
+nav > * a:hover {
+  text-transform: uppercase;
+  color: var(--clr-heading);
+  border-bottom: 3px solid var(--clr-body-bg);
+  color: var(--clr-heading);
+  transition: border 0.4s ease-in-out;
+}
+
+/** DISCARD MAIN NAVIGATION & ALLOW FOR MOBILE NAVIGATOR  */
+@media screen and (max-width: 920px) {
+  body main header.navigation {
+    display: none;
+  }
+  body main header.mobile_navigation {
+    display: block;
+    z-index: 10;
+    position: relative;
+    width: 100%;
+    height: 0;
+
+    & span {
+      & i {
+        font-size: 2rem;
+        position: fixed;
+        right: 20px;
+        top: 15px;
+        z-index: 12;
+        color: var(--clr-deco);
+      }
+    }
+
+    & .top_lvl_header {
+      width: 70%;
+      display: block;
+      & img {
+        width: 40px;
+        height: 40px;
+      }
+
+      & ul {
+        border-bottom: 2px solid var(--clr-deco);
+        & li a {
+          font-size: 1rem;
+          transition: border 0.4s ease-in-out;
+        }
+      }
+
+      .color-picker > fieldset {
+        border: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 1.5rem;
+        width: 3%;
+        margin-inline: auto;
+        border-radius: 1rem 0 0 0;
+        position: relative;
+
+        & input {
+          cursor: pointer;
+        }
+      }
+
+      .color-picker input[type="radio"] {
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+  }
+}

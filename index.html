@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Nihil">
+    <meta name="Keyword" content="Drawing, art, Portraits, Sketching">
+    <meta name="Description" content="A web portfolio for art">
+
+    <link rel="icon" type="image/x-icon" href="Images/logo_2.jpeg">
+    <title>VividArt</title>
+    <link rel="stylesheet" href="index.css"> <!--? EXTERNAL CSS FILE 4 -> MAIN DOCUMENT--->
+    <link rel="stylesheet" href="Navigation_stylesheet.css"> <!--? EXTERNAL CSS FILE 4 -> NAVIGATION SECTION  --->
+    <link rel="stylesheet" href="Education_stylesheet.css"> <!--? EXTERNAL CSS FILE 4 -> ADVICE SECTION  --->
+    <link rel="stylesheet" href="ReDos_stylesheet.css"> <!--? EXTERNAL CSS FILE 4 -> RE-DOs SECTION--->
+    <link rel="stylesheet" href="Support_stylesheet.css"> <!--? EXTERNAL CSS FILE 4 -> SUPPORT SECTION-->
+    <link rel="stylesheet" href="Connect_stylesheet.css"> <!--? EXTERNAL CSS FILE 4 -> CONNECT SECTION -->
+    <link rel="stylesheet" href="Footer_stylesheet.css"> <!--? EXTERNAL CSS FILE 4 -> FOOTER SECTION --->
+    <script src="index.js"></script>
+
+    <!--** GOOGLE FONT IMPORTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Play:wght@400;700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster&family=Play:wght@400;700&family=Rubik+Moonrocks&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster&family=M+PLUS+1+Code:wght@100..700&family=Play:wght@400;700&family=Rubik+Moonrocks&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a0f6b1fd98.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--  **BACKGROUND COLOR CONTROL CODE, changes the pages theme to the liking of the user-->
+    <form class="color-picker" action="" title="main_controller">
+        <fieldset>
+            <legend class="visually-hidden">Pick a color scheme</legend>
+            <label for="light" class="visually-hidden">Light</label>
+            <input type="radio" name="theme" id="light" title="Light Theme Mode" checked>
+
+            <label for="pink" class="visually-hidden">Pink theme</label>
+            <input type="radio" id="pink" name="theme" title="Pink theme Mode">
+
+            <label for="blue" class="visually-hidden">Blue theme</label>
+            <input type="radio" id="blue" name="theme" title="Blue Theme Mode">
+
+            <label for="green" class="visually-hidden">Green theme</label>
+            <input type="radio" id="green" name="theme" title="Green Theme Mode">
+
+            <label for="dark" class="visually-hidden">Dark theme</label>
+            <input type="radio" id="dark" name="theme" title="Dark Theme Mode">
+        </fieldset>
+    </form>
+
+
+    <!-- **END BACKGROUND COLOR CONTROL -->
+    <main class="document">
+        <!--**DESKTOP/LAPTOP NAVIGATION CODE  -->
+        <!--** NAVIGATION FOR SCREEN > 900px  -->
+        <header class="navigation">
+            <nav class="top_lvl_header">
+                <img id="logo" src="Images/logo_2.jpeg" alt="Nihil logo" width="60" height="60">
+                <ul>
+                    <li><a href="#home" class="tab_link" onclick="openTab('event', 'main_content')">Home</a></li>
+                    <li><a href="#about" class="tab_link"><strong style="text-transform: uppercase;">Nihil</strong></a>
+                    </li>
+                    <li><a href="#preview" class="tab_link">Preview</a></li>
+                    <li><a href="#advice" class="tab_link" onclick="openTab('event', 'advice')">Education</a></li>
+                    <li><a href="#redo" class="tab_link" onclick="openTab('event', 'redo')">Re Do's</a></li>
+                    <li><a href="#support" class="tab_link" onclick="openTab('event', 'support')">Support</a></li>
+                    <li><a href="#connect" class="tab_link" onclick="openTab('event', 'connect')">Connect</a></li>
+                </ul>
+            </nav>
+            <nav class=" low_lvl_header" id="nav_">
+                <h3 class="webname">VividArt</h3>
+                <ul>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#mail">E&hyphen;Mail</a></li>
+                    <li><a href="#socials">socials</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!--**NAVIGATION FOR MOBILE  -->
+        <!--** SCREENS WITH WIDTH SMALLER THAN 900px HAVE THIS NAVIGATION  -->
+        <header class="mobile_navigation">
+            <span><i id="nav_controller" class="fa-solid fa-bars"></i></span>
+            <nav class="top_lvl_header" id="mobile_nav">
+                <img id="logo" src="Images/logo_2.jpeg" alt="Nihil logo" width="60" height="60">
+                <ul>
+                    <li><a href="#home" class="tab_link" onclick="openTab('event', 'main_content')">Home</a></li>
+                    <li><a href="#about" class="tab_link"><strong style="text-transform: uppercase;">Nihil</strong></a>
+                    </li>
+                    <li><a href="#preview" class="tab_link">Preview</a></li>
+                    <li><a href="#advice" class="tab_link" onclick="openTab('event', 'advice')">Education</a></li>
+                    <li><a href="#redo" class="tab_link" onclick="openTab('event', 'redo')">Re Do's</a></li>
+                    <li><a href="#support" class="tab_link" onclick="openTab('event', 'support')">Support</a></li>
+                    <li><a href="#connect" class="tab_link" onclick="openTab('event', 'connect')">Connect</a></li>
+                </ul>
+                <h3 class="webname">VividArt</h3>
+                <form class="color-picker" action="">
+                    <fieldset>
+                        <legend class="visually-hidden">Pick a color scheme</legend>
+                        <label for="light" class="visually-hidden">Light</label>
+                        <input type="radio" name="theme" id="light" title="Light Theme Mode" checked>
+
+                        <label for="pink" class="visually-hidden">Pink theme</label>
+                        <input type="radio" id="pink" name="theme" title="Pink theme Mode">
+
+                        <label for="blue" class="visually-hidden">Blue theme</label>
+                        <input type="radio" id="blue" name="theme" title="Blue Theme Mode">
+
+                        <label for="green" class="visually-hidden">Green theme</label>
+                        <input type="radio" id="green" name="theme" title="Green Theme Mode">
+
+                        <label for="dark" class="visually-hidden">Dark theme</label>
+                        <input type="radio" id="dark" name="theme" title="Dark Theme Mode">
+                    </fieldset>
+                </form>
+            </nav>
+        </header>
+
+        <!--** MAIN DOCUMENT  -->
+        <!--** MOTHER CONTAINER  -->
+        <section class="content">
+            <!--**Multi layered content fo the home section   -->
+            <!--**Basic page content for main or home section -->
+            <main id="main_content" class="tabContent">
+                <!-- ** HOME SECTION -->
+                <section id="home">
+                    <article>
+                        <h2>Welcome to <span>VividArt</span><b>.</b></h2>
+                        <p>
+                            Explore my diverse collection of artwork, ranging from vibrant paintings to intricate
+                            sculptures.
+                            Each piece tells a
+                            unique story, inviting you to delve into the artist's mind and emotions. <br>
+                            Whether you're an art enthusiast, a collector, or simply curious, this gallery is a
+                            sanctuary
+                            for all.
+                            <br> Here, you'll find:
+                        </p>
+                    </article>
+                </section>
+                <!--**INTRODUCTORY SECTION -->
+                <section id="intro">
+                    <fieldset>
+                        <legend>VividArt</legend>
+                        <p>
+                            <strong>VividArt</strong> is a web portfolio for art, a collection of artworks, portraits,
+                            sculptures, and other art
+                            projects.
+                        </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Abstract Expressions</legend>
+                        <p>
+                            Dive into the depths of abstraction, where brushstrokes dance freely, and
+                            colors collide in harmonious chaos.
+                        </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Nature's Symphony</legend>
+                        <p>
+                            Witness the beauty of landscapes, flora, and fauna captured through my lens.
+                            Let the serenity of nature wash over you.
+                        </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Sculpted Dreams</legend>
+                        <p>
+                            Touch the curves and contours of sculptures that breathe life into stone, wood,
+                            and metal. Feel the passion behind each chisel mark.
+                        </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Mixed Media Magic</legend>
+                        <p>
+                            Explore the fusion of materials—paper, fabric, found objects—melded into
+                            thought-provoking compositions.
+                        </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Portraits of Emotion</legend>
+                        <p>
+                            Faces that reveal secrets, eyes that hold stories—my portraits capture the
+                            essence of humanity.
+                        </p>
+                    </fieldset>
+                </section>
+                <!-- ** ABOUT SECTION -->
+                <section id="about">
+                    <h1>About</h1>
+                    <div class="divider"></div>
+                    <fieldset>
+                        <legend>Who am i <span>?</span></legend>
+                        <p>
+                            Well that depends, <del>im art</del>. Just kidding i'm an aspiring artist, whose dedicated
+                            with
+                            creating imagination that can be viewed by many at once. Art is imagination, art is
+                            thoughts,
+                            art is fluid, art is beyond what the eyes can comprehend. Art is transforming the invisible
+                            &amp;
+                            intangible to concepts that can be viewed, understood, and shared by many people at
+                            once.<br>
+                            I've been drawing way back since i can remember, and my hands have never been separated with
+                            pens &amp;
+                            pencils.<br>
+                            When i said <b>am art</b> i was'nt kidding, that alone is <i>art</i>.<br>
+                            But seriously, i love to draw, being lost in my own mind of infinite possibles turning
+                            nothing
+                            in to breath taking pieces that people resonate with in beyond words. That is art. <i>Art is
+                                an
+                                explosion!</i> if you know you know.<br>
+                            Besides this i am also an aspiring software developer or just a <i>programmer</i>, funny
+                            enough
+                            the two are quite similar than most people might think, like what similar between
+                            programming
+                            and
+                            drawing <sup>or any form of art</sup>?
+                            well it like this, both a artist and a programmer start with a blank screen, canvas, or
+                            piece of
+                            paper
+                            with steady and keen focus, line by line, stroke by stroke we turn nothing to a very very
+                            <i>i
+                                cannot amplify how many very</i> important end product afterwards. <br>
+                            <mark>Don't believe me?</mark>, look at the world we live in, the people who run the world,
+                            the
+                            wealthiest people are either programmers or in software development industry,
+                            <a href="https://en.wikipedia.org/wiki/Elon_Musk" target="_blank" rel="noopener"
+                                title="Businessman and Inventor">Elon Musk</a>,
+                            <a href="https://en.wikipedia.org/wiki/Bill_Gates" target="_blank" rel="noopener"
+                                title="Businessman, investor, Philanthropist, and writer">Bill Gates</a>,
+                            <a href="https://en.wikipedia.org/wiki/Mark_Zuckerberg" target="_blank" rel="noopener"
+                                title="Businessman and Philanthropist">Mark Zuckerberg</a>,
+                            <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" rel="noopener"
+                                title="Businessman, Computer Scientist, internet Entrepreneur">Larry Page</a> etc,
+                            than switch angles one of the most valuable things in this world is art <sup>Why this so? It
+                                beyond me.</sup>, <i>maybe it like i said before, art can speak to people in such a
+                                manner
+                                that
+                                words can speak</i>, artworks such as the <a
+                                href="https://en.wikipedia.org/wiki/Mona_Lisa" target="_blank" rel="noopener"
+                                title="Mona Lisa | 1503 - 1506 (1517)">Mona Lisa, by
+                                <sup>Leonardo di ser Piero da Vinci</sup> </a>, <a
+                                href="https://en.wikipedia.org/wiki/Virgin_of_the_Rocks" target="_blank" rel="noopener"
+                                title="Virgin of the Rocks">Virgin of the Rocks, by <sup>Leonardo di ser Piero da
+                                    Vinci</sup></a>,
+                            <a href="https://en.wikipedia.org/wiki/Starry_Night_Over_the_Rh%C3%B4ne" target="_blank"
+                                rel="noopener" title="van Gogh">Starry Night Over the Rhône by, <sup>Vincent Willem van
+                                    Gogh</sup></a>, <a
+                                href="https://en.wikipedia.org/wiki/Van_Gogh_self-portrait_%281889%29" target="_blank"
+                                title="van Gogh" rel="noopener"> Vincent Willem Van Gogh Self Portrait, by <sup>Vincent
+                                    Willem van Gogh</sup></a>,
+                            <a href="https://en.wikipedia.org/wiki/The_Last_Supper_(Leonardo)" target="_blank"
+                                rel="noopener" title="  Leonardo di ser Piero da Vinci">The Last
+                                Supper, by <sup>Leonardo di ser Piero da
+                                    Vinci</sup> </a> and
+                            So no, i'm trying to merge the two <strong>Technology</strong> &amp; <strong>Art</strong>,
+                            yes,
+                            use
+                            you smart phone, computer or laptop, to view this and be amazed. <br>
+                            let call it <strong>Artology</strong>&#128512; <br>
+                            Enjoy.
+                        </p>
+                        <p>
+                            If you have, looked through this art-portfolio and you're pleased with my work, you can
+                            visit my
+                            programmer-portfolio maybe you'll also like that other side of my art.
+                            <a href="https://banelezulu.github.io/Portfolio2024/?Name=Banele+&Email=BaneleZulu85%40gmail.com&subject=Portfolio+&Message=Hi#contacts"
+                                target="_blank" title="Visit My portfolio" rel="noopener">
+                                <i class="fa-solid fa-up-right-from-square"></i>
+                            </a>
+                        </p>
+                        <div class="sroll"></div>
+                    </fieldset>
+                </section>
+                <!--**Show your best drawings -->
+                <section id="preview">
+                    <h1>Gallery<span>&sol;</span>Catalogue</h1>
+                    <div class="divider"></div>
+                    <div class="scroll_reveal">
+                        <h3><span>Some Of My Best Work.</span></h3>
+                        <p>
+                            <span>I'm not one to boast, but this are some of my best work so far, <i>are these my best
+                                    work?</i> <strong>no, not yet</strong>. I can still, draw, i still draw
+                                <i>sometimes</i>
+                                but i believe i can one up my self if I re-do these. But anyway these are my lasted
+                                drawing
+                                and ones hold dear. When I look back at my earlier works—the ones
+                                that once felt like masterpieces—and realize they were merely stepping
+                                stones. Now i'm armed with experience and determination, and ready to ascend higher
+                                peaks.
+                                The promise of what lies beyond fuels my creativity. <br>
+
+                                Art isn't just about technical prowess; it's about vulnerability. It's about
+                                daring to express what words cannot. So, as you visit these drawings,
+                                consider this: <b>What stories do they tell?</b>, <b>What emotions do they evoke?</b>,
+                                And
+                                most importantly, <b>how do they resonate with you?</b>
+                            </span>
+                        </p>
+                    </div>
+                    <!--** Best of the catalogue  -->
+                    <div class="grid-container">
+                        <div class="grid-item item1"></div>
+                        <div class="grid-item item2"></div>
+                        <div class="grid-item item3"></div>
+                        <div class="grid-item item4"></div>
+                        <div class="grid-item item5"></div>
+                        <div class="grid-item item6"></div>
+                        <div class="grid-item item7"></div>
+                        <div class="grid-item item8"></div>
+                    </div>
+
+                    <!--**Slider catalogue  -->
+                    <div class="container">
+                        <h2>It a process of steadiness and patience.</h2>
+                        <div class="slider_wrapper">
+                            <div class="slider">
+                                <img id="slide_1" src="CompleteTimeline/phase_1.jpg" alt="phase 1">
+                                <img id="slide_2" src="CompleteTimeline/phase_2.jpg" alt="phase 2">
+                                <img id="slide_3" src="CompleteTimeline/phase_3.jpg" alt="phase 3">
+                                <img id="slide_4" src="CompleteTimeline/phase_4.jpg" alt="phase 4">
+                                <img id="slide_5" src="CompleteTimeline/phase_5.jpg" alt="phase 5">
+                                <img id="slide_6" src="CompleteTimeline/phase_6.jpg" alt="phase 6">
+                                <img id="slide_7" src="CompleteTimeline/phase_7.jpg" alt="phase 7">
+                                <img id="slide_8" src="CompleteTimeline/phase_8.jpg" alt="phase 8">
+                                <img id="slide_9" src="CompleteTimeline/phase_9.jpg" alt="phase 9">
+                                <img id="slide_10" src="CompleteTimeline/phase_10.jpg" alt="phase 10">
+                                <img id="slide_11" src="CompleteTimeline/phase_11.jpg" alt="phase 11">
+                                <img id="slide_12" src="CompleteTimeline/phase_12.jpg" alt="phase 12">
+                                <img id="slide_13" src="CompleteTimeline/phase_13.jpg" alt="phase 13">
+                                <img id="slide_14" src="CompleteTimeline/phase_14.jpg" alt="phase 14">
+                            </div>
+                            <div class="slider_nav">
+                                <a href="#slide_1" class="slide_link"></a>
+                                <a href="#slide_2" class="slide_link"></a>
+                                <a href="#slide_3" class="slide_link"></a>
+                                <a href="#slide_4" class="slide_link"></a>
+                                <a href="#slide_5" class="slide_link"></a>
+                                <a href="#slide_6" class="slide_link"></a>
+                                <a href="#slide_7" class="slide_link"></a>
+                                <a href="#slide_8" class="slide_link"></a>
+                                <a href="#slide_9" class="slide_link"></a>
+                                <a href="#slide_10" class="slide_link"></a>
+                                <a href="#slide_11" class="slide_link"></a>
+                                <a href="#slide_12" class="slide_link"></a>
+                                <a href="#slide_13" class="slide_link"></a>
+                                <a href="#slide_14" class="slide_link"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--** Second grid container -->
+                    <div class="grid-container_2">
+                        <div class="grid-item item1"></div>
+                        <div class="grid-item item2"></div>
+                        <div class="grid-item item3"></div>
+                        <div class="grid-item item4"></div>
+                        <div class="grid-item item5"></div>
+                        <div class="grid-item item6"></div>
+                        <div class="grid-item item7"></div>
+                        <div class="grid-item item8"></div>
+                        <div class="grid-item item9"></div>
+                        <div class="grid-item item10"></div>
+                        <div class="grid-item item11"></div>
+                        <div class="grid-item item12"></div>
+                        <div class="grid-item item13"></div>
+                        <div class="grid-item item14"></div>
+                        <div class="grid-item item15"></div>
+                        <div class="grid-item item16"></div>
+                        <div class="grid-item item17"></div>
+                        <div class="grid-item item18"></div>
+                        <div class="grid-item item19"></div>
+                        <div class="grid-item item20"></div>
+                        <div class="grid-item item21"></div>
+                        <div class="grid-item item22"></div>
+                        <div class="grid-item item23"></div>
+                        <div class="grid-item item24"></div>
+                        <div class="grid-item item25"></div>
+                        <div class="grid-item item26"></div>
+                        <div class="grid-item item27"></div>
+                        <div class="grid-item item28"></div>
+                        <div class="grid-item item29"></div>
+                        <div class="grid-item item30"></div>
+                        <div class="grid-item item31"></div>
+                        <div class="grid-item item32"></div>
+                        <div class="grid-item item33"></div>
+                        <div class="grid-item item34"></div>
+                        <div class="grid-item item35"></div>
+                        <div class="grid-item item36"></div>
+                        <div class="grid-item item37"></div>
+                        <div class="grid-item item38"></div>
+                        <div class="grid-item item39"></div>
+                        <div class="grid-item item40"></div>
+                        <div class="grid-item item41"></div>
+                        <div class="grid-item item42"></div>
+                        <div class="grid-item item43"></div>
+                        <div class="grid-item item44"></div>
+                        <div class="grid-item item45"></div>
+                        <div class="grid-item item46"></div>
+                        <div class="grid-item item47"></div>
+                        <div class="grid-item item48"></div>
+                        <div class="grid-item item49"></div>
+                        <div class="grid-item item50"></div>
+                        <div class="grid-item item51"></div>
+                        <div class="grid-item item52"></div>
+                        <div class="grid-item item53"></div>
+                        <div class="grid-item item54"></div>
+                        <div class="grid-item item55"></div>
+                        <!-- <div class="grid-item item56"></div> -->
+                        <div class="grid-item item57"></div>
+                        <div class="grid-item item58"></div>
+                        <div class="grid-item item59"></div>
+                        <div class="grid-item item60"></div>
+                        <div class="grid-item item61"></div>
+                        <div class="grid-item item62"></div>
+                        <div class="grid-item item63"></div>
+                        <div class="grid-item item64"></div>
+                        <div class="grid-item item65"></div>
+                        <div class="grid-item item66"></div>
+                        <div class="grid-item item67"></div>
+                        <div class="grid-item item68"></div>
+                        <div class="grid-item item69"></div>
+                        <div class="grid-item item70"></div>
+                        <div class="grid-item item71"></div>
+                        <div class="grid-item item72"></div>
+                        <div class="grid-item item73"></div>
+                        <div class="grid-item item74"></div>
+                        <div class="grid-item item75"></div>
+                        <div class="grid-item item76"></div>
+                        <div class="grid-item item77"></div>
+                        <div class="grid-item item78"></div>
+                        <div class="grid-item item79"></div>
+                        <div class="grid-item item80"></div>
+                        <div class="grid-item item81"></div>
+                        <div class="grid-item item82"></div>
+                        <div class="grid-item item83"></div>
+                        <div class="grid-item item84"></div>
+                        <div class="grid-item item85"></div>
+                        <div class="grid-item item86"></div>
+                        <div class="grid-item item87"></div>
+                        <div class="grid-item item88"></div>
+                        <div class="grid-item item89"></div>
+                        <div class="grid-item item90"></div>
+                        <div class="grid-item item91"></div>
+                        <div class="grid-item item92"></div>
+                        <div class="grid-item item93"></div>
+                        <div class="grid-item item94"></div>
+                        <div class="grid-item item95"></div>
+                        <div class="grid-item item96"></div>
+                        <div class="grid-item item97"></div>
+                        <div class="grid-item item98"></div>
+                        <div class="grid-item item99"></div>
+                        <div class="grid-item item100"></div>
+                        <div class="grid-item item101"></div>
+                        <div class="grid-item item102"></div>
+                        <div class="grid-item item103"></div>
+                        <div class="grid-item item104"></div>
+                        <div class="grid-item item105"></div>
+                        <div class="grid-item item106"></div>
+                        <div class="grid-item item107"></div>
+                        <div class="grid-item item108"></div>
+                        <div class="grid-item item109"></div>
+                        <div class="grid-item item110"></div>
+                        <div class="grid-item item111"></div>
+                        <div class="grid-item item112"></div>
+                        <div class="grid-item item113"></div>
+                        <div class="grid-item item114"></div>
+                        <div class="grid-item item115"></div>
+                        <div class="grid-item item116"></div>
+                        <div class="grid-item item117"></div>
+                        <div class="grid-item item118"></div>
+                        <div class="grid-item item119"></div>
+                        <div class="grid-item item120"></div>
+                        <div class="grid-item item121"></div>
+                        <div class="grid-item item122"></div>
+                        <div class="grid-item item123"></div>
+                        <div class="grid-item item124"></div>
+                        <div class="grid-item item125"></div>
+                        <div class="grid-item item126"></div>
+                        <div class="grid-item item127"></div>
+                        <div class="grid-item item128"></div>
+                        <div class="grid-item item129"></div>
+                        <div class="grid-item item130"></div>
+                        <div class="grid-item item131"></div>
+                        <div class="grid-item item132"></div>
+                        <div class="grid-item item133"></div>
+                        <div class="grid-item item134"></div>
+                        <div class="grid-item item135"></div>
+                        <div class="grid-item item136"></div>
+                        <div class="grid-item item137"></div>
+                        <div class="grid-item item138"></div>
+                        <div class="grid-item item139"></div>
+                        <div class="grid-item item140"></div>
+                        <div class="grid-item item141"></div>
+                        <div class="grid-item item142"></div>
+                        <div class="grid-item item143"></div>
+                        <div class="grid-item item144"></div>
+                        <div class="grid-item item145"></div>
+                        <div class="grid-item item146"></div>
+                        <div class="grid-item item147"></div>
+                    </div>
+
+                    <!--**  -->
+                    <!--**This is draggable x-scroll image slider  -->
+                    <!--**Scrollpane is functional on both x-y exis  -->
+                    <!--** This scroll is for the most realistic images in my art portfolio  -->
+                    <!--**  -->
+                    <div class="real_container">
+                        <h2>My Personal Favorites</h2>
+                        <div class="realistic_image_scrollpane">
+                            <div class="realistic real_1"></div>
+                            <div class="realistic real_2"></div>
+                            <div class="realistic real_3"></div>
+                            <div class="realistic real_4"></div>
+                            <div class="realistic real_5"></div>
+                            <div class="realistic real_6"></div>
+                            <div class="realistic real_7"></div>
+                            <div class="realistic real_8"></div>
+                            <div class="realistic real_9"></div>
+                            <div class="realistic real_10"></div>
+                            <div class="realistic real_11"></div>
+                            <div class="realistic real_12"></div>
+                            <div class="realistic real_13"></div>
+                            <div class="realistic real_14"></div>
+                            <div class="realistic real_15"></div>
+                            <div class="realistic real_16"></div>
+                            <div class="realistic real_17"></div>
+                            <div class="realistic real_18"></div>
+                            <div class="realistic real_19"></div>
+                            <div class="realistic real_20"></div>
+                            <div class="realistic real_21"></div>
+                            <div class="realistic real_22"></div>
+                            <div class="realistic real_23"></div>
+                            <div class="realistic real_24"></div>
+                            <div class="realistic real_25"></div>
+                            <div class="realistic real_26"></div>
+                            <div class="realistic real_27"></div>
+                            <div class="realistic real_28"></div>
+                            <div class="realistic real_29"></div>
+                            <div class="realistic real_30"></div>
+                            <div class="realistic real_31"></div>
+                            <div class="realistic real_32"></div>
+                            <div class="realistic real_33"></div>
+                            <div class="realistic real_34"></div>
+                            <div class="realistic real_35"></div>
+                            <div class="realistic real_36"></div>
+                            <div class="realistic real_37"></div>
+                            <div class="realistic real_38"></div>
+                            <div class="realistic real_39"></div>
+                            <div class="realistic real_40"></div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <section id="advice" class="tabContent" style="display: none;">
+                <h1>Education</h1>
+                <div class="divider"></div>
+                <figure>
+                    <video src="Images_Background/Background_video2.mp4" autoplay muted loop></video>
+                    <figcaption>Art Is What You Make Of It.</figcaption>
+                </figure>
+
+                <article>
+                    <h4>Here's My Take</h4>
+                    <p>
+                        So <strong>you like to learn how to draw?</strong> well there are many ways to start learning
+                        how.You can take pen and paper and start learning, watch videos, or if you're really interested
+                        you
+                        can take course online or apply for art training courses <br>
+                        The trick is to find the best method that will work for you.
+                    </p>
+                    <fieldset class="method method_1"> <!--**PEN & PAPER LEARNING METHOD -->
+                        <legend>Learning to Draw with Pen &amp; Paper</legend>
+                        <p>
+                            Drawing is a skill that can be developed with practice and patience. Whether you're a
+                            beginner
+                            or looking to refine your
+                            techniques, here are some dos and don'ts to help you on your journey with pen and paper
+                            drawing. <br>
+                            All these rules or let call them suggestions, are from my own personal experience and might
+                            not be true to your own experience. But they sure do apply or al least will emerge at some
+                            point in you drawing journey. So when they do always remember these <b>Do's</b> &colon;
+                            <b>Don'ts</b>
+                            <br>
+                            This section all drawing media, whether it pen &amp; paper, digital drawing, painting,
+                            sculptures etc, these
+                            are sure to work.
+                        </p>
+
+                        <dt>DO <span>&colon;</span></dt>
+                        <dd><strong> Start with the basics <span>&colon;</span></strong> Begin with simple shapes and
+                            lines to build your confidence and understanding of form.
+                        </dd>
+                        <dd>
+                            <strong>Practice regularly <span>&colon;</span></strong> Consistency is key. Even a few
+                            minutes each day can make a big
+                            difference
+                            over time.
+                        </dd>
+                        <dd>
+                            <strong>Use references<span>&colon;</span></strong> study from life or photographs to
+                            improve your observation skills and accuracy.
+                        </dd>
+                        <dd>
+                            <strong>Experiment with styles <span>&colon;</span></strong> Try out different drawing
+                            styles to find what resonates with you and to develop versatility.
+                        </dd>
+                        <dd>
+                            <strong>Learn from mistakes <span>&colon;</span></strong>
+                            Embrace errors as part of the learning process. Analyze them to understand
+                            what went wrong and how
+                            to improve.
+                        </dd>
+
+                        <dt>DON'T <span>&colon;</span></dt>
+                        <dd>
+                            <strong>Be Impatient<span>&colon;</span></strong> Don't try to draw everything at once.
+                        </dd>
+                        <dd>
+                            <strong>Rush the process <span>&colon;</span></strong> Good drawing takes time. Don't try to
+                            complete your artwork too quickly.
+                        </dd>
+                        <dd>
+                            <strong>Be afraid of criticism <span>&colon;</span></strong>
+                            Constructive feedback is invaluable. Seek out opinions and learn from them.
+                        </dd>
+                        <dd>
+                            <strong>Limit yourself to one technique <span>&colon;</span></strong>
+                            Explore various pen techniques like hatching, cross-hatching,
+                            stippling, and more.
+                        </dd>
+                        <dd>
+                            <strong>Neglect the fundamentals <span>&colon;</span></strong>
+                            Understanding perspective, composition, and anatomy is crucial, even
+                            when drawing stylized
+                            work.
+                        </dd>
+                        <dd>
+                            <strong>Ignore the rules <span>&colon;</span></strong>
+                            Don't be afraid to break the rules. At least be careful when doing so.
+                        </dd>
+                        <dd>
+                            <strong>Compare your journey <span>&colon;</span></strong>
+                            Everyone learns at their own pace. Focus on your progress rather than
+                            comparing yourself to
+                            others.
+                        </dd>
+                        <p>
+                            The key to learning drawing is to enjoy the process. Let your creativity flow, and
+                            don't be afraid to step
+                            outside your comfort zone. Happy drawing!
+                        </p>
+                    </fieldset>
+
+                    <fieldset class="method method_2"> <!--**VISUAL MEDIA LEARNING METHOD -->
+                        <legend>Mastering Drawing Through Visual Media</legend>
+                        <p>
+                            Visual media offers a rich and engaging way to learn drawing. It caters to those who learn
+                            best
+                            by seeing techniques in
+                            action. Here are some tips for those embarking on their artistic journey through visual
+                            media
+                        </p>
+
+                        <dt>DO<span>&colon;</span></dt>
+                        <dd>
+                            <strong>Watch tutorials<span>&colon;</span></strong>
+                            There are countless video tutorials available online that can guide you
+                            step-by-step through various
+                            drawing techniques.
+                        </dd>
+                        <dd>
+                            <strong>Analyze artwork<span>&colon;</span></strong>
+                            Study the work of artists you admire. Pause videos to understand how they
+                            approach composition,
+                            shading, and detail.
+                        </dd>
+                        <dd>
+                            <strong>Create a visual library<span>&colon;</span></strong>
+                            Collect images, videos, and artworks that inspire you and refer to them
+                            often to inform your
+                            own work.
+                        </dd>
+                        <dd>
+                            <strong>Participate in online workshops<span>&colon;</span></strong>
+                            Many artists host live sessions where you can watch them draw
+                            in real-time and ask
+                            questions.
+                        </dd>
+                        <dd>
+                            <strong>Use apps <span>&colon;</span></strong>
+                            There are several drawing apps that provide interactive lessons and allow you to draw
+                            directly on your device.
+                        </dd>
+
+                        <dt>DON'T<span>&colon;</span></dt>
+                        <dd>
+                            <strong>Get distracted<span>&colon;</span></strong>
+                            With so much content available, it’s easy to jump from one tutorial to another.
+                            Focus on completing one
+                            lesson at a time.
+                        </dd>
+                        <dd>
+                            <strong>Neglect practice<span>&colon;</span></strong>
+                            Watching is helpful, but improvement comes from applying what you've learned
+                            to your own drawings.
+                        </dd>
+                        <dd>
+                            <strong>Be passive<span>&colon;</span></strong>
+                            Engage with the content by drawing along, taking notes, or even teaching someone
+                            else what you've learned.
+                        </dd>
+                        <dd>
+                            <strong>Forget to have fun<span>&colon;</span></strong>
+                            The joy of drawing comes from the process as much as the final product.
+                            Enjoy the visual journey!
+                        </dd>
+
+                        <ul> <!--** My Recommendations -->
+                            <li> Artology
+                                <a href="https://www.youtube.com/@artology1" target="_blank" rel="noopener"
+                                    title="Artology Youtube Channel" class="fa-brands fa-youtube" aria-hidden="true">
+                                </a>
+                                <a href="https://www.instagram.com/waj_artology/" target="_blank" rel="noopener"
+                                    title="Artology Instagram" class="fa-brands fa-instagram" aria-hidden="true">
+                                </a>
+                                <a href="https://www.etsy.com/shop/wajartology/?etsrc=sdt" target="_blank"
+                                    rel="noopener" title="Artology Etsy Store" class="fa-solid fa-store"
+                                    aria-hidden="true">
+                                </a>
+                                <a href="https://www.patreon.com/Artology" target="_blank" rel="noopener"
+                                    title="Artology Patreon" class="fa-brands fa-patreon" aria-hidden="true">
+                                </a>
+                            </li>
+                            <li> DeMoose Art
+                                <a href="https://www.youtube.com/@DeMooseArt" target="_blank" rel="noopener"
+                                    title="DeMoose Art Youtube Channel" class="fa-brands fa-youtube" aria-hidden="true">
+                                </a>
+                                <a href="https://www.instagram.com/demoose_art/" target="_blank" rel="noopener"
+                                    title="DeMoose Art Instagram" class="fa-brands fa-instagram" aria-hidden="true">
+                                </a>
+                                <a href="https://www.facebook.com/DeMooseArtPage" target="_blank" rel="noopener"
+                                    title="DeMoose Art Facebook" class="fa-brands fa-facebook" aria-hidden="true">
+                                </a>
+                                <a href="https://www.patreon.com/demooseart" target="_blank" rel="noopener"
+                                    title="DeMoose Patreon" class="fa-brands fa-patreon" aria-hidden="true">
+                                </a>
+                            </li>
+                            <li> Davide Zezza
+                                <a href="https://www.youtube.com/@davidezezza/videos" target="_blank" rel="noopener"
+                                    title="Artology Youtube Channel" class="fa-brands fa-youtube" aria-hidden="true">
+                                </a>
+                                <a href="https://www.instagram.com/davidezezza_art/" target="_blank" rel="noopener"
+                                    title="Davide Zezza Instagram" class="fa-brands fa-instagram" aria-hidden="true">
+                                </a>
+                                <a href="https://t.me/+RC14NYeFJ5YxNDNk" target="_blank" rel="noopener"
+                                    title="Davide Telegram" class="fa-brands fa-telegram" aria-hidden="true">
+                                </a>
+                                <a href="https://www.patreon.com/davidezezzaart" target="_blank" rel="noopener"
+                                    title="Davide Zezza Patreon" class="fa-brands fa-patreon" aria-hidden="true">
+                                </a>
+                            </li>
+                            <li> Kirsty Partridge Art
+                                <a href="https://www.youtube.com/@KirstyPartridgeArt" target="_blank" rel="noopener"
+                                    title="Artology Youtube Channel" class="fa-brands fa-youtube" aria-hidden="true">
+                                </a>
+                                <a href="https://www.instagram.com/kirstysart/t" target="_blank" rel="noopener"
+                                    title="Kirsty Partridge Instagram" class="fa-brands fa-instagram"
+                                    aria-hidden="true">
+                                </a>
+                                <a href="https://www.kirstypartridge.com/12-drawing-exercises-cheatsheet"
+                                    target="_blank" rel="noopener" title="Free 12 Drawing Exercises"
+                                    class="fa-solid fa-up-right-from-square" aria-hidden="true">
+                                </a>
+                                <a href="https://www.kirstypartridge.com/free-resources" target="_blank" rel="noopener"
+                                    title="kirsty Partridge Free Art Resources" class="fa-solid fa-up-right-from-square"
+                                    aria-hidden="true">
+                                </a>
+                                <a href="https://kit.co/KirstyPartridgeArt" target="_blank" rel="noopener"
+                                    title="kirsty Partridge 'My Material'" class="fa-solid fa-up-right-from-square"
+                                    aria-hidden="true">
+                                </a>
+                            </li>
+                            <p>
+                                These are resources that have been helpful to me personally, you more than welcome to
+                                explore the internet to find one that will be useful to you.
+                            </p>
+                        </ul>
+                    </fieldset>
+
+                    <fieldset class="method method_3"> <!--**ATTENDING ART COURSES -->
+                        <legend>Thriving in Art Courses</legend>
+                        <p>
+                            Art courses provide a structured environment for learning and honing your craft. Whether
+                            you're
+                            in a classroom or taking
+                            an online course, here's how to make the most of this experience:
+                        </p>
+
+                        <dt>DO <span>&colon;</span></dt>
+                        <dd>
+                            <strong>Engage fully<span>&colon;</span></strong>
+                            Participate actively in classes, discussions, and critiques. The more you put in,
+                            the more you'll gain.
+                        </dd>
+                        <dd>
+                            <strong>Practice diligently<span>&colon;</span></strong>
+                            Use the assignments to push your boundaries and practice new
+                            techniques.
+                        </dd>
+                        <dd>
+                            <strong>Seek feedback<span>&colon;</span></strong>
+                            Regularly ask for constructive criticism from instructors and peers to
+                            improve your work.
+                        </dd>
+                        <dd>
+                            <strong>Study the masters<span>&colon;</span></strong>
+                            Take the opportunity to study art history and the works of great artists as
+                            part of your curriculum.
+                        </dd>
+                        <dd>
+                            <strong>Network<span>&colon;</span></strong>
+                            Connect with fellow students, instructors, and visiting artists to build
+                            relationships
+                            and learn from their
+                            experiences.
+                        </dd>
+                        <dt>DON'T <span>&colon;</span></dt>
+                        <dd>
+                            <strong>Be intimidated<span>&colon;</span></strong>
+                            Everyone is there to learn. Don’t be afraid to show your work and ask
+                            questions.
+                        </dd>
+                        <dd>
+                            <strong>Procrastinate<span>&colon;</span></strong>
+                            Stay on top of your assignments and projects to avoid last-minute stress.
+                        </dd>
+                        <dd>
+                            <strong>Ignore the basics<span>&colon;</span></strong>
+                            Even if you’re eager to create complex works, a strong foundation in the
+                            basics is crucial.
+                        </dd>
+                        <dd>
+                            <strong>Limit your learning<span>&colon;</span></strong>
+                            Explore additional resources outside of the coursework to supplement
+                            your
+                            education.
+                        </dd>
+                        <dd>
+                            <strong>Forget self-care<span>&colon;</span></strong>
+                            While dedication is important, so is taking care of your physical and
+                            mental
+                            health.
+                        </dd>
+                        <p>
+                            <i>All my learning are from practice, therefore i have not clue how useful art courses are
+                                but if you like to try, go ahead.</i>
+                            <q>
+                                Art courses are a fantastic way to develop your skills in a supportive and educational
+                                setting.
+                                Embrace the journey, and
+                                let the structured learning guide you to new artistic discoveries.
+                            </q> <sup>From the internet...</sup>
+                        </p>
+
+                        <div class="online_courses">
+                            <span>
+                                <h1>Proko</h1>
+                                <a href="https://www.proko.com/browse/all/courses" target="_blank" title="Proko Website"
+                                    rel="noopener" class="fa-solid fa-up-right-from-square"></a>
+                            </span>
+                            <span>
+                                <h1>Paintable</h1>
+                                <a href="https://paintable.cc/academy/?ref=https%3A%2F%2Fcourses.paintable.cc%2Fa%2F14437%2F8AK5FEom"
+                                    target="_blank" title="Paintable Website" rel="noopener"
+                                    class="fa-solid fa-up-right-from-square"></a>
+                            </span>
+                            <span>
+                                <h1>Digital Painting Studio</h1>
+                                <a href="https://www.digitalpaintingstudio.com/?ref=https%3A%2F%2Fwww.digitalpaintingstudio.com%2Fa%2F2147519762%2FWJbx2KMA"
+                                    target="_blank" title="DPS Website" rel="noopener"
+                                    class="fa-solid fa-up-right-from-square"></a>
+                            </span>
+                            <span>
+                                <h1>Aaron Blaise</h1>
+                                <a href="https://creatureartteacher.com/" target="_blank"
+                                    title="CreatureArtTeacher Website" rel="noopener"
+                                    class="fa-solid fa-up-right-from-square"></a>
+                            </span>
+                            <span>
+                                <h1>Vitruvian Studio</h1>
+                                <a href="https://vitruvianstudio.com/about-online-art-courses/?ref=5" target="_blank"
+                                    title="Vitruvian Studio Website" rel="noopener"
+                                    class="fa-solid fa-up-right-from-square"></a>
+                            </span>
+                            <span>
+                                <h1>Pencil Kings</h1>
+                                <a href="https://www.pencilkings.com/join/?affiliate=conartemp" target="_blank"
+                                    title="Pencil Website" rel="noopener" class="fa-solid fa-up-right-from-square"></a>
+                            </span>
+                            <span>
+                                <h1>New Masters Academy</h1>
+                                <a href="https://www.nma.art/?ref=52" target="_blank" title="Master Academy Website"
+                                    rel="noopener" class="fa-solid fa-up-right-from-square"></a>
+                            </span>
+                            <span>
+                                <h1>21-Draw</h1>
+                                <a href="https://www.21-draw.com/?rfsn=5348879.b4115b3" target="_blank"
+                                    title="21-Draw Website" rel="noopener" class="fa-solid fa-up-right-from-square"></a>
+                            </span>
+                            <span>
+                                <h1>CGMA Classes</h1>
+                                <a href="https://www.cgmasteracademy.com/" target="_blank" title="CGMA Website"
+                                    rel="noopener" class="fa-solid fa-up-right-from-square"></a>
+                            </span>
+                            <span>
+                                <h1>Gnomon Workshop</h1>
+                                <a href="Gnomon Workshop" target="_blank" title="Gnomon Website" rel="noopener"
+                                    class="fa-solid fa-up-right-from-square"></a>
+                            </span>
+                        </div>
+                    </fieldset>
+                </article>
+            </section>
+
+            <!--**Advice on how to learn to draw  -->
+            <!-- **Drawing you'll like to redo, and others will like to draw -->
+            <section id="redo" class="tabContent" style="display: none;">
+                <h1>Re Do's</h1>
+                <div class="divider"></div>
+                <article>
+                    <h2>My Artistic Journey&colon; <span>Then &amp; Now</span></h2>
+                    <h4>Before and After Showcase</h4>
+                    <div class="sample_1">
+                        <div class="before before_1">
+                            <p>
+                                <code>Apr 29, 2018 Sunday 14:57</code> <br>
+                                This drawing i did in 2018. It was during the earlier attempts to draw full scale
+                                drawings using pen, thus there was no room for error. Which is ironic because looking
+                                back now this hole art peace is an error.
+                            </p>
+                        </div>
+                        <div class="after after_1">
+                            <p>
+                                <code>Sep 04, 2021 Saturday 05:11</code><br>
+                                This one was done completed and in 2021. It was avery great experience with and process
+                                to try and top or one up myself. The difference clear as day, people usually think that
+                                on the first one i was not being serious but that was my full skill at work there. <br>
+                                With this these no shame when i look at it, these always room for improvement.<br>
+                                The next step is to one up this one <strong>Stay tuned</strong>.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="sample_2">
+                        <div class="before before_2">
+                            <p>
+                                <code>Jan, 03 2018 Wednesday 01:36</code><br>
+                                This was during the time i was trying to master human facial features.
+                            </p>
+                        </div>
+                        <div class="after after_2">
+                            <p>
+                                <code>Aug, 23 2018 Thursday 17:08</code><br>
+                                These was a great progression marker for the year. I was happy with the progress.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="sample_3">
+                        <div class="before before_3">
+                            <p>
+                                <code>Nov, 10 2018 Saturday 15:47</code> <br>
+                                This actually on of the most challenging peace i done. There are many attempts i tried
+                                before reaching this one, i was the best one compared to the other peaces.
+                            </p>
+                        </div>
+                        <div class="after after_3">
+                            <p>
+                                <code>Jan 03, 2020 Tuesday 23:12</code> <br>
+                                I was very happy with the outcome when this one was finished. <i>Can i do it even better
+                                    now?</i> probably, but im good with this one because of the many attempt i did to
+                                even create the first one
+                            </p>
+                        </div>
+                    </div>
+                    <div class="sample_5">
+                        <div class="before before_5">
+                            <p>
+                                <code>Jul 12, 2019 Friday 18:11</code><br>
+                                Here my first mistake was being afraid to go big. The reference image was drawn on a
+                                Strathmore Bristol Drawing A3/2 paper, and i was not sure to draw on larger papers and i
+                                dint have the right material. But after failing miserably, i let it be, developed myself
+                                and skill and came back for the 2<sup>nd</sup> round.
+                            </p>
+                        </div>
+                        <div class="after after_5">
+                            <p>
+                                <code>Dec 17, 2022 Saturday 19:16</code><br>
+                                So after gradually getting better and improving, i decided to remake the piece and the
+                                out is greater than before the only is is lacking the right materials, having the
+                                appropriate paper and drawing pencils. but overall i fell good about this one.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="sample_4">
+                        <div class="before before_4">
+                            <p>
+                                <code>Oct 05, 2021 Tuesday 05:26</code> <br>
+                                Even with this one it a decent piece of work, <i>Why?</i>, well first i did it with ink
+                                pen
+                                and i remembered it very well i did'nt make many mistakes, the only mistake i made was
+                                being
+                                impatient. The thing with drawing using ink pens is it like painting you have to work in
+                                layers and layers, with each layers gradually increasing the pressure on your hand to
+                                add
+                                darker and darker shade. With me i was just going for the result not enjoying or
+                                learning
+                                from the process.
+                            </p>
+                        </div>
+                        <div class="after after_4">
+                            <p>
+                                <code>Jan 03, 2021 Tuesday 06:05</code> <br>
+                                This is one of my favorite. It is in the favorites list after-all. This piece i did it
+                                just last year, and even now i don't think any less of it, it is great i learned from my
+                                mistakes and because the drawing process began in later december with a rough pencil
+                                sketch than gradually with my Fiber Castell drawing pens and Stonehenge Fine Art Paper.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                <summary>
+                    <h3>Is there a piece you would like me to redo <span>?</span></h3>
+                    <p>
+                        Head to my socials or contact page and connect with me. I'll look it up and get to drawing.
+                    </p>
+                </summary>
+            </section>
+
+            <!-- ** Support by responding to the form -->
+            <section id="support" class="tabContent" style="display: none;">
+                <h1>Support</h1>
+                <div class="divider"></div>
+                <article>
+                    <h2>FAQ</h2>
+                    <p>This is not expert advice so take it with a grain of salt, this is from my own personal
+                        experience. <br>
+                        If you want personal advice head to the contact page and connect.
+                    </p>
+                    <div class="background_control">
+                        <ul>
+                            <li><strong>Where do I start with drawing?</strong>
+                                Start by exploring subjects that interest you and practice by copying images from those
+                                topics. As you progress, you'll naturally feel ready to explore more complex subjects.
+                            </li>
+                            <li><strong> How can I improve my drawing skills?</strong> Practice is key. Practice does'nt
+                                always makes perfect, practising wrong equals wrong results. A helpful tip
+                                is to use the <mark>measure and mark method</mark>,
+                                where you measure the object you're copying with a pencil or ruler and make light marks
+                                on your paper as a size guide. <sup>This always work</sup>
+                            </li>
+                            <li><strong>Can you explain light and shade in drawing?</strong> Understanding light and
+                                shade is crucial for
+                                adding depth to your drawings. There are resources available that can teach you
+                                about this important aspect of drawing.
+                            </li>
+                            <li>
+                                <strong>How do I keep my drawings clean?</strong> To prevent smudging, place a spare
+                                sheet of paper under your hand while drawing. This
+                                also helps to avoid transferring oils from your skin onto the paper.
+                            </li>
+                            <li><strong> Who are some of the Masters of drawing?</strong> Historical masters include
+                                Leonardo da Vinci,
+                                Albrecht Durer, Michelangelo, and
+                                Raphael, among others. Studying their works can provide valuable insights into
+                                techniques
+                                and styles.
+                            </li>
+                            <li><strong>What materials do I need to start drawing?</strong> The essentials include a set
+                                of pencils[<i>Fiber Castell</i>], paper[<i>Clairefontaine Mixed Media Pad, Stonehenge
+                                    Fine Art Paper, Strathmore Bristol Drawing pad</i>] ,and an
+                                eraser. Experiment
+                                with different pencils to understand their lightness or darkness.
+                            </li>
+                            <li><strong>What are some tips for digital drawing?</strong> For digital artists, using
+                                shortcuts, working with layers,
+                                and utilizing perspective grids can be very helpful.
+                            </li>
+                            <li><strong>How do I learn to draw from scratch?</strong> Begin by drawing basic lines and
+                                shapes. Then, transform these shapes into simple
+                                3D objects and practice drawing them in perspective.
+                            </li>
+                            <li><strong>How do I learn to draw from scratch?</strong> Begin by drawing basic lines and
+                                shapes. Then, transform these shapes into simple
+                                3D objects and practice drawing them in perspective.
+                            </li>
+                            <li><strong>What are the foundations of drawing?</strong> A solid understanding of
+                                perspective is essential. Start with frontal perspective
+                                and gradually explore other types of perspective as you gain confidence.
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+
+            <!--**Basic page like gut-hub, explaining a bit about the web  -->
+            <section id="connect" class="tabContent" style="display: none;">
+                <h1>Connect</h1>
+                <div class="divider"></div>
+                <main>
+                    <article id="blog">
+                        <h2>Blog</h2>
+                        <h1>BLOG COMING SOON <i class="fa fa-solid fa-wrench"></i></h1>
+                    </article>
+
+                    <article id="contact">
+                        <h2>Contacts</h2>
+                        <section id="contacts">
+                            <p class="contact-info">
+                                Lets get in touch. You have something you like me to draw for you? <span>Talk to
+                                    me</span>.
+                            </p>
+
+                            <div class="contact-row">
+                                <!-- LEFT COLUMN -->
+                                <div class="contact-left">
+                                    <!-- Email-Box -->
+                                    <div class="icon-box">
+                                        <div class="icon">
+                                            <i class="fa-solid fa-envelope"></i>
+                                        </div>
+                                        <div class="info">
+                                            <h4>Email</h4>
+                                            <p><a href="mailto:BaneleZulu85@gmail.com">BaneleZulu85&commat;gmail.com</a>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Call-Box -->
+                                    <div class="icon-box">
+                                        <div class="icon">
+                                            <i class="fa-solid fa-phone"></i>
+                                        </div>
+                                        <div class="info">
+                                            <h4>Phone Details</h4>
+                                            <p>&plus;27 7* **** **4</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Location -->
+                                    <div class="icon-box">
+                                        <div class="icon">
+                                            <i class="fa-solid fa-location-dot"></i>
+                                        </div>
+                                        <div class="info">
+                                            <h4>Address</h4>
+                                            <p>KwaZulu Natal, Durban, *********, ********** Township, **** *********
+                                                Road, 3**0</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- LEFT COLUMN -->
+                                <div class="contact-right">
+                                    <form id="myForm" action="https://formspree.io/f/xayrvnpv" method="POST">
+                                        <input type="text" name="Name" id="name" placeholder="Your Name" required>
+                                        <input type="email" name="Email" id="email" placeholder="MyEmail@gmail.com"
+                                            required>
+                                        <input type="text" name="subject" id="subject" placeholder="Subject" required>
+                                        <textarea name="Message" id="msg" rows="10" placeholder="Your message"
+                                            required></textarea>
+                                        <input type="submit" value="Send Message">
+                                    </form>
+                                    <span id="message"></span>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+
+                    <article id="mail">
+                        <h2>Connect Professional Here<b>.</b></h2>
+                        <div>
+                            <i>G-mail<a href="mailto:BaneleZulu85@gmail.com" target="_blank" title="Connect @ Gmail"
+                                    rel="noopener" class="fa-solid fa-envelope" aria-hidden="true"></a></i>
+                            <i>Outlook-mail<a href="mailto:banele.zulu@outlook.com" target="_blank"
+                                    title="Connect @ Outlook" rel="noopener" class="fa-regular fa-envelope"
+                                    aria-hidden="true"></a></i>
+                            <i>LinkedIn<a href="https://www.linkedin.com/in/banele-zulu/" target="_blank"
+                                    title="Connect @ LinkedIn" rel="noopener" class="fa fa-brands fa-linkedin"
+                                    aria-hidden="true"></a></i>
+                        </div>
+                    </article>
+
+                    <article id="socials">
+                        <h2>Socials</h2>
+                        <div>
+                            <a href="https://github.com/BaneleZulu" target="_blank" rel="noopener"
+                                title="nihil@github"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/banele-zulu/" target="_blank" rel="noopener"
+                                title="nihil@linkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://www.whatsapp.com" target="_blank" rel="noopener" title="nihil@whatsapp"><i
+                                    class="fa-brands fa-whatsapp"></i></a>
+                            <a href="https://www.instagram.com" target="_blank" rel="noopener"
+                                title="nihil@instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.facebook.com" target="_blank" rel="noopener" title="nihil@facebook"><i
+                                    class="fa-brands fa-facebook"></i></a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener" title="nihil@X"><i
+                                    class="fa-brands fa-twitter"></i></a>
+                            <a href="https://www.youtube.com" target="_blank" rel="noopener" title="nihil@youtube"><i
+                                    class="fa-brands fa-youtube"></i></a>
+                            <a href="mailto:BaneleZulu85@gmail.com" target="_blank" rel="noopener"
+                                title="nihil@gmail"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </article>
+                </main>
+            </section>
+
+        </section>
+
+        <!--** Footer section -->
+        <footer>
+            <div class="footer_container">
+                <!-- **This is the left side of the footer, which will house my image, and pseudonym -->
+                <div class="container_left">
+                    <h5>Nihil</h5>
+                </div>
+
+                <!--**this is the right side of the footer, containing the most inform   -->
+                <div class="container_right">
+
+                    <div class="inner_right_top">
+                        <div class="portfolio_img"></div>
+                        <summary>
+                            <p>This art web portfolio is created and maintained by <strong>Banele Zulu</strong> . All
+                                information presented is accurate to the best of my
+                                knowledge and is intended to share insights into my personal journey and experiences as
+                                an aspiring artist.
+                            </p>
+                        </summary>
+                    </div>
+
+                    <div class="inner_right_center">
+                        <h4>Saw Everything<span>?</span> Jump Back.</h4>
+                        <div class="tags">
+                            <ul class="tag_links">
+                                <li><a href="#home" title="Back to Home" rel="noopener">HOME</a></li>
+                                <li><a href="#intro" title="Back to Intro" rel="noopener">INTRO</a></li>
+                                <li><a href="#about" title="Back to About" rel="noopener">ABOUT</a></li>
+                                <li><a href="#preview" title="Back Gallery&Catalogue" rel="noopener">CATALOGUE</a></li>
+                                <li><a href="#support" title="Back to Support" rel="noopener">SUPPORT</a>
+                                </li>
+                                <li><a href="#advice" title="Advice" rel="noopener">EDUCATION</a></li>
+                                <li><a href="#redo" title="Back to Re Do's" rel="noopener">RE DO'S</a></li>
+                                <li><a href="#business" title="Back to Business" rel="noopener">BUSINESS</a></li>
+                                <li><a href="#blog" title="Back to Blog" rel="noopener">BLOG</a></li>
+                                <li><a href="#contacts" title="Back to Contacts" rel="noopener">CONTACT</a></li>
+                                <li><a href="#mail" title="Back to Languages" rel="noopener">E-MAIL</a></li>
+                                <li><a href="#socials" title="Back to Languages" rel="noopener">SOCIALS</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="inner_right_bottom">
+                        <h3>Find Me Here<span>!</span></h3>
+                        <div class="socials">
+                            <a href="https://github.com/BaneleZulu" target="_blank" rel="noopener"
+                                title="nihil@github"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/banele-zulu/" target="_blank" rel="noopener"
+                                title="nihil@linkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://www.whatsapp.com" target="_blank" rel="noopener" title="nihil@whatsapp"><i
+                                    class="fa-brands fa-whatsapp"></i></a>
+                            <a href="https://www.instagram.com" target="_blank" rel="noopener"
+                                title="nihil@instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.facebook.com" target="_blank" rel="noopener" title="nihil@facebook"><i
+                                    class="fa-brands fa-facebook"></i></a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener" title="nihil@X"><i
+                                    class="fa-brands fa-twitter"></i></a>
+                            <a href="https://www.youtube.com" target="_blank" rel="noopener" title="nihil@youtube"><i
+                                    class="fa-brands fa-youtube"></i></a>
+                            <a href="mailto:BaneleZulu85@gmail.com" target="_blank" rel="noopener"
+                                title="nihil@gmail"><i class="fa-solid fa-envelope"></i></a>
+                            <a href="tel:+27 7* **** **4" target="_blank" rel="noopener" title="Need me? Call here."><i
+                                    class="fa-solid fa-phone"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <p class="out_text" style="text-align: center; margin:0;">&copy;2024 Copy right reserved.</p>
+    <p class="out_text" style="font-size:.9rem; text-align:center; margin:0;">Made with <i
+            class="fa-solid fa-heart"></i> by <a
+            href="https://www.linkedin.com/in/banele-zulu-a30861255/?trk=opento_sprofile_topcard" target="_blank"
+            rel="noopener" title="nihil@github">Banele Zulu</a>
+    </p>
+</body>
+
+</html>
