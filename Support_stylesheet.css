@@ -120,3 +120,24 @@ section#support {
     }
   }
 }
+
+@media screen and (max-width: 500px) {
+  section#support {
+    width: 100%;
+    box-sizing: border-box;
+
+     div {
+      padding-right: 3px;
+      width: 98% !important;
+      box-sizing: content-box;
+      ul {
+        margin: 0;
+        li{
+          padding-inline: 0 !important;
+          margin-inline: 0;
+        }
+      }
+    }
+  }
+}
+

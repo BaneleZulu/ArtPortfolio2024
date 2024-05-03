@@ -162,7 +162,7 @@ nav > * a:hover {
       & i {
         font-size: 2rem;
         position: fixed;
-        right: 20px;
+        right: 25px;
         top: 15px;
         z-index: 12;
         color: var(--clr-deco);

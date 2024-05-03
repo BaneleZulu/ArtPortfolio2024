@@ -1,15 +1,3 @@
-exercise();
-
-function exercise() {
-  const numbers = [1, 2, 5, 9, 2, 0, 7, 6];
-
-  numbers.sort();
-  numbers.reverse();
-  numbers.forEach((x) => {
-    console.log(x);
-  });
-}
-
 //** Reactive navigation code */
 //** Navigation header changes colors in response to scroll position on the y-axis */
 //** Default color Black, y-axis > 1000 new color : Transparent */

@@ -156,6 +156,10 @@ section#redo {
 
 @media screen and (max-width: 720px) {
   section#redo {
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    box-sizing: border-box;
     article div[class^="sample"] {
       grid-template-columns: 1fr;
       gap: 20px;

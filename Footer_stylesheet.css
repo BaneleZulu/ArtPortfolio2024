@@ -270,6 +270,7 @@ footer {
 /* * This media query is for the footer exclusively @ 500px below */
 @media screen and (max-width: 500px) {
   footer {
+    overflow: hidden;
     margin: 0 !important;
     padding: 0 !important;
     width: 100%;

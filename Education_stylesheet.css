@@ -172,6 +172,13 @@ section#advice {
   }
 }
 
+@media screen and (min-width: 1500px) {
+  & div.online_courses {
+
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+  }
+}
 @media screen and (min-width: 1001px) and (max-width: 1200px) {
   figure {
     width: 100% !important;
@@ -209,6 +216,21 @@ section#advice {
         width: 100% !important;
         text-align: center !important;
       }
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  section#advice {
+    width: 100%;
+    overflow: hidden;
+  }
+  figure {
+    width: 100% !important;
+    height: 100%;
+    video {
+      width: 100%;
+      height: 100dvh !important;
+      object-fit: cover !important;
     }
   }
 }
