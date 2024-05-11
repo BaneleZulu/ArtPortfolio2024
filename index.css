@@ -295,8 +295,8 @@ body main section#intro {
   margin-bottom: 20px;
   --max-column-size: 400px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(var(--max-column-size), 1fr));
-  /* grid-template-columns: repeat(3, 370px); */
+  /* grid-template-columns: repeat(auto-fit, minmax(var(--max-column-size), 1fr)); */
+  grid-template-columns: repeat(3, 370px);
   gap: 50px;
   justify-content: center;
   align-items: center;
@@ -341,10 +341,10 @@ body main section#intro {
 }
 @media screen and (max-width: 1000px) {
   body main section#intro {
-    margin: 0;
+    margin-inline: auto;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
-    width: 100%;
+    width: 95%;
 
     fieldset {
       max-width: 370px;
